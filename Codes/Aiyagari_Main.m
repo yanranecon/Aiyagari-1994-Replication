@@ -23,7 +23,7 @@ cS.dbg   = 1;            % dbg is debugging parameter
 
 %% Probability Transition Matrices
 [cS.Pi, cS.Z] ...
-         = StationaryDis_MarkovProcess(cS.s, cS.P, cS.dbg); % Firm productivity
+         = StationaryDis_MarkovProcess(cS.s, cS.P, cS.dbg); 
 
 
 %% Solve for Stationary Equilibrium
