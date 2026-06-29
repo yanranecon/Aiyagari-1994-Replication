@@ -22,7 +22,7 @@ cS.dbg   = 1;            % dbg is debugging parameter
 
 
 %% Probability Transition Matrices
-[cS.Pi, cS.Z] ...
+[cS.Pi, cS.sbar] ...
          = StationaryDis_MarkovProcess(cS.s, cS.P, cS.dbg); 
 
 
