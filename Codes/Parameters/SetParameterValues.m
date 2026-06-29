@@ -22,6 +22,7 @@ cS.T     = 5e2;                  % Number of periods to simulate
 % ******** Production ********
 cS.delta = 0.1;                  % Depreciation rate
 cS.alpha = 0.33;                 % Capital share in production function
+cS.Z     = 1;                    % Firm productivity is normalized to 1
 
 
 % ******** Discretize State Space ********
