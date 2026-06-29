@@ -1,4 +1,4 @@
-function [Pi, Z] = StationaryDis_MarkovProcess(s, P, dbg)
+function [Pi, sbar] = StationaryDis_MarkovProcess(s, P, dbg)
 %% Documentation
 %{
 1. Function description:
@@ -12,10 +12,10 @@ given the transition matrix P
 (3). dbg: Debugging indicator (=1: debug; =0: skip)
 
 3. OUTPUTS:
-(1). Pi: The stationary distribution of s, [a n*1 vector]
-         Pi should be a row vector, such that Pi*P=Pi
-         and the sum of all elements in Pi should be 1
-(2). Z:  Mean of s with stationry distribution, [a scalar]
+(1). Pi:    The stationary distribution of s, [a n*1 vector]
+            Pi should be a row vector, such that Pi*P=Pi
+            and the sum of all elements in Pi should be 1
+(2). sbar:  Mean of s with stationry distribution, [a scalar]
 %}
 
 
@@ -50,10 +50,10 @@ for i = 1 : length(P)
   A(i,i) = P(i,i) - 1;  
 end
 
-A  = [A; ones(1, length(P))];
-B  = [zeros(length(P),1); 1];
-Pi = A \ B;
-Z  = s'*Pi;
+A    = [A; ones(1, length(P))];
+B    = [zeros(length(P),1); 1];
+Pi   = A \ B;
+sbar = s'*Pi;
 
 
 end
